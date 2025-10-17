@@ -39,7 +39,7 @@ class Filesys:
         if filename not in node.children:
             node.children[filename] = Node(filename, is_file=True)
         node.children[filename].content = content
-    
+        
     def readFile(self, path):
         node = self._traverse(path)
         if node and node.is_file:
